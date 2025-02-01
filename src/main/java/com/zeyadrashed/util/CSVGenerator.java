@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 /**
@@ -24,7 +26,8 @@ public class CSVGenerator {
 
     private static final String[] SYMBOLS = {"AAPL", "GOOG", "MSFT", "AMZN"};
     private static final Random random = new Random();
-
+    private static final String sysDate = LocalDateTime.now()
+            .format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
     /**
      * Generates a random CSV file with a given number of transactions.
      *
@@ -38,6 +41,7 @@ public class CSVGenerator {
             bw.newLine();
 
             LocalDate startDate = LocalDate.of(2020, 1, 1);
+            UtilLogger.logDebug("generating test dataset (" + sysDate + "_sample_transactions.csv file)....");
 
             for (int i = 0; i < numTransactions; i++) {
                 LocalDate date = startDate.plusDays(random.nextInt(5 * 365));
@@ -46,8 +50,11 @@ public class CSVGenerator {
                 int quantity = random.nextInt(200) + 1;
                 double price = 10 + (490 * random.nextDouble());
 
-                bw.write(String.format("%s,%s,%s,%d,%.2f", date, type, symbol, quantity, price));
+                String line = String.format("%s,%s,%s,%d,%.2f", date, type, symbol, quantity, price);
+                bw.write(line);
                 bw.newLine();
+
+                UtilLogger.logDebug("generated line: " + line);
             }
         }
     }
@@ -58,8 +65,9 @@ public class CSVGenerator {
     @Test
     public void testGenerator() {
         try {
-            generateCSV("sample_transactions.csv", 10);
+            generateCSV(sysDate + "_sample_transactions.csv", 10);
             System.out.println("CSV file generated successfully.");
+            UtilLogger.logInfo("CSV file generated successfully.");
         } catch (IOException e) {
             System.err.println("error generating csv: " + e.getMessage());
         }
