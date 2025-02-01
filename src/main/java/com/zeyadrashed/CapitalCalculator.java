@@ -6,6 +6,7 @@ import com.zeyadrashed.util.CSVParser;
 import com.zeyadrashed.util.UtilLogger;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.*;
 
@@ -36,10 +37,10 @@ public class CapitalCalculator {
     public CapitalCalculator() {
         purchaseQueues = new HashMap<>();
         symbolGains = new HashMap<>();
-        UtilLogger.logDebug("Initialized 'purchaseQueues' and 'symbolGains' maps in CapitalCalculator constructor");
+        UtilLogger.logDebug("initialized 'purchaseQueues' and 'symbolGains' maps in `CapitalCalculator` constructor");
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         CapitalCalculator calculator = new CapitalCalculator();
 
         File csvDir = new File("csv");
@@ -72,6 +73,7 @@ public class CapitalCalculator {
             }
         }
         calculator.printSummary();
+        UtilLogger.exportLog();
     }
 
     /**
@@ -179,7 +181,7 @@ public class CapitalCalculator {
      * Prints a summary of the aggregated capital gains/losses per stock symbol.
      */
     public void printSummary() {
-        UtilLogger.logInfo("Printing summary of capital gains/losses per stock symbol:");
+        UtilLogger.logInfo("printing summary of capital gains/losses per stock symbol:");
         System.out.println("\n--- Capital Gains/Losses Summary ---");
         for (Map.Entry<String, Double> entry : symbolGains.entrySet()) {
             String symbol = entry.getKey();

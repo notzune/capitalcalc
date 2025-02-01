@@ -84,13 +84,14 @@ public class UtilLogger {
     }
 
     /**
-     * Exports the current log buffer content to a file.
+     * Exports the current log buffer content to a file in '/logs'.
      *
-     * @param filePath the path where the log file will be written
      * @throws IOException if an error occurs while writing to the file
      */
-    public static void exportLog(String filePath) throws IOException {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))) {
+    public static void exportLog() throws IOException {
+        DateTimeFormatter fileDtf = DateTimeFormatter.ofPattern("yyyy_MM_dd_HH_mm_ss");
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("logs/" + LocalDateTime.now().format(fileDtf) + ".log", true))) {
+            logInfo("program successfully finished executing @ " + LocalDateTime.now().format(dtf));
             writer.write(logBuffer.toString());
         }
     }
