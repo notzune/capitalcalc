@@ -1,10 +1,6 @@
 package com.zeyadrashed.util;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
+import java.io.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -43,7 +39,7 @@ public class UtilLogger {
      * Logs an error message along with the stack trace of an exception.
      *
      * @param message the error message to log
-     * @param e the exception to log
+     * @param e       the exception to log
      */
     public static void logError(String message, Exception e) {
         String timestamp = LocalDateTime.now().format(dtf);

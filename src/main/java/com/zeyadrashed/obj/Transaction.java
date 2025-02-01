@@ -25,11 +25,11 @@ public class Transaction {
     /**
      * Constructor for a stock transaction.
      *
-     * @param date the date of the transaction
-     * @param type the transaction type (BUY or SELL)
-     * @param symbol the stock symbol
+     * @param date     the date of the transaction
+     * @param type     the transaction type (BUY or SELL)
+     * @param symbol   the stock symbol
      * @param quantity the number of shares
-     * @param price the price per share
+     * @param price    the price per share
      */
     public Transaction(LocalDate date, TransactionType type, String symbol, int quantity, double price) {
         this.date = date;
@@ -44,35 +44,45 @@ public class Transaction {
      *
      * @return transaction date
      */
-    public LocalDate getDate() { return date; }
+    public LocalDate getDate() {
+        return date;
+    }
 
     /**
      * Gets the transaction type.
      *
      * @return TransactionType
      */
-    public TransactionType getType() { return type; }
+    public TransactionType getType() {
+        return type;
+    }
 
     /**
      * Gets the stock symbol.
      *
      * @return symbol
      */
-    public String getSymbol() { return symbol; }
+    public String getSymbol() {
+        return symbol;
+    }
 
     /**
      * Gets the quantity of shares.
      *
      * @return number of shares
      */
-    public int getQuantity() { return quantity; }
+    public int getQuantity() {
+        return quantity;
+    }
 
     /**
      * Gets the price per share.
      *
      * @return price per share
      */
-    public double getPrice() { return price; }
+    public double getPrice() {
+        return price;
+    }
 
     @Override
     public String toString() {

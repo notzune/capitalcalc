@@ -3,9 +3,12 @@ package com.zeyadrashed.util;
 import com.zeyadrashed.obj.Transaction;
 import com.zeyadrashed.obj.TransactionType;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.time.LocalDate;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Parses a CSV file into a list of transactions.

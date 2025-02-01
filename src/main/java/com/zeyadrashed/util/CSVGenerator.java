@@ -3,7 +3,9 @@ package com.zeyadrashed.util;
 import com.zeyadrashed.obj.TransactionType;
 import org.junit.Test;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -26,12 +28,12 @@ public class CSVGenerator {
 
     private static final String[] SYMBOLS = {"AAPL", "GOOG", "MSFT", "AMZN"};
     private static final Random random = new Random();
-    private static final String sysDate = LocalDateTime.now()
-            .format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+    private static final String sysDate = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+
     /**
      * Generates a random CSV file with a given number of transactions.
      *
-     * @param filePath the path where the CSV file will be written
+     * @param filePath        the path where the CSV file will be written
      * @param numTransactions the number of transactions to generate
      * @throws IOException if there is an error writing the file
      */
@@ -65,7 +67,7 @@ public class CSVGenerator {
     @Test
     public void testGenerator() {
         try {
-            generateCSV(sysDate + "_sample_transactions.csv", 10);
+            generateCSV("csv/" + sysDate + "_sample_transactions.csv", 50);
             System.out.println("CSV file generated successfully.");
             UtilLogger.logInfo("CSV file generated successfully.");
         } catch (IOException e) {
