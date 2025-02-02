@@ -11,7 +11,8 @@ import java.text.DecimalFormat;
 import java.util.*;
 
 /**
- * Main business logic.
+ * Main business logic. This version gathers all transactions from all CSV files, sorts them by date,
+ * and then processes them for more accurate calculations.
  *
  * <p>21:198:435:25SP Adv. Data Structures & Algorithms</p>
  * <p>Chapter 6 Project</p>
@@ -20,6 +21,8 @@ import java.util.*;
  * <p>
  * Using a Deque ensures that when we partially consume a BUY transaction,
  * the remaining shares remain at the front of the queue (preserving FIFO order).
+ *
+ * </p>
  *
  * @author Zeyad "zmr15" Rashed
  * @mailto zmr15@scarletmail.rutgers.edu
@@ -59,19 +62,26 @@ public class CapitalCalculator {
             return;
         }
 
+        List<Transaction> allTransactions = new ArrayList<>();
         for (File file : csvFiles) {
             try {
                 List<Transaction> transactions = CSVParser.parseCSV(file.getAbsolutePath());
-                String msg = "processing file: " + file.getName();
+                String msg = "adding " + transactions.size() + " transactions from file: " + file.getName();
                 System.out.println(msg);
                 UtilLogger.logInfo(msg);
-                calculator.processTransactions(transactions);
+                allTransactions.addAll(transactions);
             } catch (Exception e) {
                 String msg = "error processing file: " + file.getName() + " - ";
                 System.err.println(msg + e.getMessage());
                 UtilLogger.logError(msg, e);
             }
         }
+
+        UtilLogger.logInfo("sorting " + allTransactions.size() + " transactions by date");
+        Collections.sort(allTransactions, Comparator.comparing(Transaction::getDate));
+
+        calculator.processTransactions(allTransactions);
+
         calculator.printSummary();
         UtilLogger.exportLog();
     }
