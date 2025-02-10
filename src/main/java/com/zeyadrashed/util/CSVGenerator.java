@@ -67,7 +67,7 @@ public class CSVGenerator {
     @Test
     public void testGenerator() {
         try {
-            generateCSV("csv/" + sysDate + "_sample_transactions.csv", 50);
+            generateCSV("csv/" + sysDate + "_sample_transactions.csv", 10);
             System.out.println("CSV file generated successfully.");
             UtilLogger.logInfo("CSV file generated successfully.");
         } catch (IOException e) {

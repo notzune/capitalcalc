@@ -1,0 +1,907 @@
+DEBUG [2025-02-03 14:09:41] initialized 'purchaseQueues' and 'symbolGains' maps in `CapitalCalculator` constructor
+INFO  [2025-02-03 14:09:41] adding 50 transactions from file: 20250201_161853_sample_transactions.csv
+INFO  [2025-02-03 14:09:41] adding 50 transactions from file: 20250201_170544_sample_transactions.csv
+INFO  [2025-02-03 14:09:41] adding 50 transactions from file: 20250201_182146_sample_transactions.csv
+INFO  [2025-02-03 14:09:41] adding 50 transactions from file: 20250201_182150_sample_transactions.csv
+INFO  [2025-02-03 14:09:41] sorting 200 transactions by date
+INFO  [2025-02-03 14:09:41] processing 200 transactions
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-01-02, type=BUY, symbol=GOOG, quantity=182, price=178.73]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-01-03, type=BUY, symbol=GOOG, quantity=185, price=181.50]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-01-16, type=BUY, symbol=AAPL, quantity=18, price=410.96]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-01-17, type=BUY, symbol=AAPL, quantity=192, price=171.14]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-01-27, type=BUY, symbol=AAPL, quantity=113, price=353.35]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-01-31, type=BUY, symbol=AAPL, quantity=76, price=250.84]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-02-09, type=SELL, symbol=AAPL, quantity=8, price=264.85]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2020-02-09, type=SELL, symbol=AAPL, quantity=8, price=264.85]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-16, type=BUY, symbol=AAPL, quantity=18, price=410.96]. using 8 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2020-02-09, type=SELL, symbol=AAPL, quantity=8, price=264.85]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 8 shares of AAPL: $-1168.88
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-02-15, type=SELL, symbol=MSFT, quantity=90, price=47.71]
+ERROR [2025-02-03 14:09:41] insufficient shares available to sell for symbol: MSFT. Available: 0, Attempted to sell: 90
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: MSFT. Available: 0, Attempted to sell: 90
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-03-10, type=BUY, symbol=AAPL, quantity=54, price=463.59]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-03-20, type=BUY, symbol=GOOG, quantity=67, price=283.24]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-04-24, type=BUY, symbol=AMZN, quantity=130, price=217.34]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-04-26, type=BUY, symbol=GOOG, quantity=4, price=482.06]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-05-05, type=SELL, symbol=GOOG, quantity=138, price=25.68]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2020-05-05, type=SELL, symbol=GOOG, quantity=138, price=25.68]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-02, type=BUY, symbol=GOOG, quantity=182, price=178.73]. using 138 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2020-05-05, type=SELL, symbol=GOOG, quantity=138, price=25.68]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 138 shares of GOOG: $-21120.9
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-05-15, type=BUY, symbol=MSFT, quantity=46, price=130.82]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-06-16, type=SELL, symbol=AMZN, quantity=88, price=269.63]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2020-06-16, type=SELL, symbol=AMZN, quantity=88, price=269.63]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-04-24, type=BUY, symbol=AMZN, quantity=130, price=217.34]. using 88 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2020-06-16, type=SELL, symbol=AMZN, quantity=88, price=269.63]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 88 shares of AMZN: $4601.52
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-06-22, type=BUY, symbol=MSFT, quantity=90, price=288.10]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-07-05, type=BUY, symbol=MSFT, quantity=4, price=457.01]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-07-23, type=BUY, symbol=MSFT, quantity=106, price=465.30]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-07-27, type=BUY, symbol=AMZN, quantity=108, price=311.39]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-07-30, type=BUY, symbol=AAPL, quantity=146, price=297.80]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-08-28, type=SELL, symbol=AMZN, quantity=129, price=301.19]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2020-08-28, type=SELL, symbol=AMZN, quantity=129, price=301.19]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-04-24, type=BUY, symbol=AMZN, quantity=42, price=217.34] for 42 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-07-27, type=BUY, symbol=AMZN, quantity=108, price=311.39]. using 87 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2020-08-28, type=SELL, symbol=AMZN, quantity=129, price=301.19]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 129 shares of AMZN: $2634.3
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-08-30, type=SELL, symbol=AMZN, quantity=129, price=236.69]
+ERROR [2025-02-03 14:09:41] insufficient shares available to sell for symbol: AMZN. Available: 21, Attempted to sell: 129
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: AMZN. Available: 21, Attempted to sell: 129
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-09-07, type=BUY, symbol=MSFT, quantity=144, price=184.33]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-09-16, type=SELL, symbol=AAPL, quantity=68, price=68.28]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2020-09-16, type=SELL, symbol=AAPL, quantity=68, price=68.28]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-01-16, type=BUY, symbol=AAPL, quantity=10, price=410.96] for 10 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-17, type=BUY, symbol=AAPL, quantity=192, price=171.14]. using 58 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2020-09-16, type=SELL, symbol=AAPL, quantity=68, price=68.28]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 68 shares of AAPL: $-9392.68
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-09-17, type=SELL, symbol=AMZN, quantity=50, price=172.74]
+ERROR [2025-02-03 14:09:41] insufficient shares available to sell for symbol: AMZN. Available: 21, Attempted to sell: 50
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: AMZN. Available: 21, Attempted to sell: 50
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-09-19, type=BUY, symbol=AMZN, quantity=123, price=247.80]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-10-03, type=BUY, symbol=AMZN, quantity=68, price=248.96]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-10-20, type=BUY, symbol=AAPL, quantity=91, price=194.49]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-10-30, type=BUY, symbol=AAPL, quantity=72, price=399.95]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-11-09, type=BUY, symbol=MSFT, quantity=60, price=279.81]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-11-14, type=SELL, symbol=GOOG, quantity=159, price=14.54]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2020-11-14, type=SELL, symbol=GOOG, quantity=159, price=14.54]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-01-02, type=BUY, symbol=GOOG, quantity=44, price=178.73] for 44 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-03, type=BUY, symbol=GOOG, quantity=185, price=181.50]. using 115 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2020-11-14, type=SELL, symbol=GOOG, quantity=159, price=14.54]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 159 shares of GOOG: $-26424.76
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-11-17, type=SELL, symbol=AMZN, quantity=97, price=125.22]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2020-11-17, type=SELL, symbol=AMZN, quantity=97, price=125.22]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-07-27, type=BUY, symbol=AMZN, quantity=21, price=311.39] for 21 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-09-19, type=BUY, symbol=AMZN, quantity=123, price=247.80]. using 76 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2020-11-17, type=SELL, symbol=AMZN, quantity=97, price=125.22]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 97 shares of AMZN: $-13225.65
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-11-19, type=BUY, symbol=AMZN, quantity=133, price=50.73]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-11-30, type=SELL, symbol=AMZN, quantity=158, price=55.73]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2020-11-30, type=SELL, symbol=AMZN, quantity=158, price=55.73]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-09-19, type=BUY, symbol=AMZN, quantity=47, price=247.80] for 47 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-10-03, type=BUY, symbol=AMZN, quantity=68, price=248.96] for 68 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-11-19, type=BUY, symbol=AMZN, quantity=133, price=50.73]. using 43 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2020-11-30, type=SELL, symbol=AMZN, quantity=158, price=55.73]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 158 shares of AMZN: $-21951.93
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2020-12-01, type=SELL, symbol=AAPL, quantity=107, price=447.66]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2020-12-01, type=SELL, symbol=AAPL, quantity=107, price=447.66]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-17, type=BUY, symbol=AAPL, quantity=134, price=171.14]. using 107 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2020-12-01, type=SELL, symbol=AAPL, quantity=107, price=447.66]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 107 shares of AAPL: $29587.64
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-01-05, type=SELL, symbol=AAPL, quantity=24, price=53.91]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-01-05, type=SELL, symbol=AAPL, quantity=24, price=53.91]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-17, type=BUY, symbol=AAPL, quantity=27, price=171.14]. using 24 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-01-05, type=SELL, symbol=AAPL, quantity=24, price=53.91]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 24 shares of AAPL: $-2813.52
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-01-15, type=SELL, symbol=AMZN, quantity=44, price=56.14]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-01-15, type=SELL, symbol=AMZN, quantity=44, price=56.14]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-11-19, type=BUY, symbol=AMZN, quantity=90, price=50.73]. using 44 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-01-15, type=SELL, symbol=AMZN, quantity=44, price=56.14]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 44 shares of AMZN: $238.04
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-01-26, type=SELL, symbol=AMZN, quantity=30, price=355.15]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-01-26, type=SELL, symbol=AMZN, quantity=30, price=355.15]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-11-19, type=BUY, symbol=AMZN, quantity=46, price=50.73]. using 30 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-01-26, type=SELL, symbol=AMZN, quantity=30, price=355.15]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 30 shares of AMZN: $9132.6
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-01-31, type=BUY, symbol=AMZN, quantity=31, price=398.41]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-01-31, type=BUY, symbol=MSFT, quantity=17, price=185.10]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-02-04, type=SELL, symbol=AMZN, quantity=89, price=425.08]
+ERROR [2025-02-03 14:09:41] insufficient shares available to sell for symbol: AMZN. Available: 47, Attempted to sell: 89
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: AMZN. Available: 47, Attempted to sell: 89
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-02-18, type=BUY, symbol=MSFT, quantity=34, price=377.66]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-02-18, type=BUY, symbol=AMZN, quantity=139, price=27.00]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-03-08, type=SELL, symbol=GOOG, quantity=171, price=79.84]
+ERROR [2025-02-03 14:09:41] insufficient shares available to sell for symbol: GOOG. Available: 141, Attempted to sell: 171
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: GOOG. Available: 141, Attempted to sell: 171
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-03-08, type=BUY, symbol=AMZN, quantity=152, price=409.81]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-03-08, type=SELL, symbol=GOOG, quantity=17, price=111.44]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-03-08, type=SELL, symbol=GOOG, quantity=17, price=111.44]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-03, type=BUY, symbol=GOOG, quantity=70, price=181.50]. using 17 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-03-08, type=SELL, symbol=GOOG, quantity=17, price=111.44]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 17 shares of GOOG: $-1191.02
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-03-13, type=SELL, symbol=AMZN, quantity=131, price=155.80]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-03-13, type=SELL, symbol=AMZN, quantity=131, price=155.80]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-11-19, type=BUY, symbol=AMZN, quantity=16, price=50.73] for 16 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-01-31, type=BUY, symbol=AMZN, quantity=31, price=398.41] for 31 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-02-18, type=BUY, symbol=AMZN, quantity=139, price=27.00]. using 84 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-03-13, type=SELL, symbol=AMZN, quantity=131, price=155.80]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 131 shares of AMZN: $4979.41
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-03-17, type=BUY, symbol=AAPL, quantity=159, price=177.26]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-03-23, type=SELL, symbol=AAPL, quantity=98, price=353.39]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-03-23, type=SELL, symbol=AAPL, quantity=98, price=353.39]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-01-17, type=BUY, symbol=AAPL, quantity=3, price=171.14] for 3 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-27, type=BUY, symbol=AAPL, quantity=113, price=353.35]. using 95 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-03-23, type=SELL, symbol=AAPL, quantity=98, price=353.39]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 98 shares of AAPL: $550.55
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-05-03, type=BUY, symbol=AMZN, quantity=184, price=278.10]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-05-04, type=BUY, symbol=AMZN, quantity=165, price=141.26]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-05-08, type=SELL, symbol=AAPL, quantity=56, price=150.79]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-05-08, type=SELL, symbol=AAPL, quantity=56, price=150.79]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-01-27, type=BUY, symbol=AAPL, quantity=18, price=353.35] for 18 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-31, type=BUY, symbol=AAPL, quantity=76, price=250.84]. using 38 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-05-08, type=SELL, symbol=AAPL, quantity=56, price=150.79]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 56 shares of AAPL: $-7447.98
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-06-01, type=BUY, symbol=MSFT, quantity=194, price=302.05]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-06-13, type=BUY, symbol=GOOG, quantity=81, price=44.80]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-06-22, type=SELL, symbol=AMZN, quantity=8, price=222.01]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-06-22, type=SELL, symbol=AMZN, quantity=8, price=222.01]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-02-18, type=BUY, symbol=AMZN, quantity=55, price=27.00]. using 8 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-06-22, type=SELL, symbol=AMZN, quantity=8, price=222.01]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 8 shares of AMZN: $1560.08
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-06-22, type=SELL, symbol=AMZN, quantity=89, price=394.65]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-06-22, type=SELL, symbol=AMZN, quantity=89, price=394.65]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-02-18, type=BUY, symbol=AMZN, quantity=47, price=27.00] for 47 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-03-08, type=BUY, symbol=AMZN, quantity=152, price=409.81]. using 42 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-06-22, type=SELL, symbol=AMZN, quantity=89, price=394.65]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 89 shares of AMZN: $16642.83
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-06-24, type=BUY, symbol=AMZN, quantity=172, price=162.62]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-06-28, type=SELL, symbol=AMZN, quantity=189, price=409.43]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-06-28, type=SELL, symbol=AMZN, quantity=189, price=409.43]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-03-08, type=BUY, symbol=AMZN, quantity=110, price=409.81] for 110 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-05-03, type=BUY, symbol=AMZN, quantity=184, price=278.10]. using 79 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-06-28, type=SELL, symbol=AMZN, quantity=189, price=409.43]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 189 shares of AMZN: $10333.27
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-06-29, type=BUY, symbol=AMZN, quantity=26, price=492.95]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-07-13, type=SELL, symbol=AAPL, quantity=18, price=357.85]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-07-13, type=SELL, symbol=AAPL, quantity=18, price=357.85]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-01-31, type=BUY, symbol=AAPL, quantity=38, price=250.84]. using 18 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-07-13, type=SELL, symbol=AAPL, quantity=18, price=357.85]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 18 shares of AAPL: $1926.18
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-07-16, type=SELL, symbol=GOOG, quantity=104, price=268.46]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-07-16, type=SELL, symbol=GOOG, quantity=104, price=268.46]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-01-03, type=BUY, symbol=GOOG, quantity=53, price=181.50] for 53 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-03-20, type=BUY, symbol=GOOG, quantity=67, price=283.24]. using 51 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-07-16, type=SELL, symbol=GOOG, quantity=104, price=268.46]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 104 shares of GOOG: $3855.1
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-07-22, type=BUY, symbol=GOOG, quantity=61, price=385.66]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-08-02, type=BUY, symbol=MSFT, quantity=143, price=460.79]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-08-17, type=SELL, symbol=MSFT, quantity=14, price=449.27]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-08-17, type=SELL, symbol=MSFT, quantity=14, price=449.27]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-05-15, type=BUY, symbol=MSFT, quantity=46, price=130.82]. using 14 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-08-17, type=SELL, symbol=MSFT, quantity=14, price=449.27]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 14 shares of MSFT: $4458.3
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-08-19, type=BUY, symbol=AAPL, quantity=10, price=481.41]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-08-20, type=BUY, symbol=AAPL, quantity=131, price=167.69]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-08-24, type=BUY, symbol=MSFT, quantity=8, price=351.78]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-08-29, type=SELL, symbol=AAPL, quantity=185, price=497.16]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-08-29, type=SELL, symbol=AAPL, quantity=185, price=497.16]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-01-31, type=BUY, symbol=AAPL, quantity=20, price=250.84] for 20 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-03-10, type=BUY, symbol=AAPL, quantity=54, price=463.59] for 54 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-07-30, type=BUY, symbol=AAPL, quantity=146, price=297.80]. using 111 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-08-29, type=SELL, symbol=AAPL, quantity=185, price=497.16]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 185 shares of AAPL: $28868.14
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-09-10, type=SELL, symbol=AMZN, quantity=62, price=316.46]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-09-10, type=SELL, symbol=AMZN, quantity=62, price=316.46]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-05-03, type=BUY, symbol=AMZN, quantity=105, price=278.10]. using 62 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-09-10, type=SELL, symbol=AMZN, quantity=62, price=316.46]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 62 shares of AMZN: $2378.32
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-09-17, type=SELL, symbol=AMZN, quantity=166, price=436.84]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-09-17, type=SELL, symbol=AMZN, quantity=166, price=436.84]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-05-03, type=BUY, symbol=AMZN, quantity=43, price=278.10] for 43 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-05-04, type=BUY, symbol=AMZN, quantity=165, price=141.26]. using 123 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-09-17, type=SELL, symbol=AMZN, quantity=166, price=436.84]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 166 shares of AMZN: $43182.16
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-09-18, type=BUY, symbol=AAPL, quantity=87, price=399.71]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-09-27, type=SELL, symbol=AAPL, quantity=27, price=146.51]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-09-27, type=SELL, symbol=AAPL, quantity=27, price=146.51]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-07-30, type=BUY, symbol=AAPL, quantity=35, price=297.80]. using 27 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-09-27, type=SELL, symbol=AAPL, quantity=27, price=146.51]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 27 shares of AAPL: $-4084.83
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-10-13, type=BUY, symbol=GOOG, quantity=87, price=316.34]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-10-15, type=BUY, symbol=GOOG, quantity=161, price=146.84]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-10-18, type=SELL, symbol=AMZN, quantity=24, price=157.41]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-10-18, type=SELL, symbol=AMZN, quantity=24, price=157.41]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-05-04, type=BUY, symbol=AMZN, quantity=42, price=141.26]. using 24 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-10-18, type=SELL, symbol=AMZN, quantity=24, price=157.41]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 24 shares of AMZN: $387.6
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-10-20, type=BUY, symbol=GOOG, quantity=197, price=218.93]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-10-25, type=BUY, symbol=AMZN, quantity=188, price=421.78]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-10-28, type=BUY, symbol=AMZN, quantity=127, price=467.02]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-11-03, type=SELL, symbol=AMZN, quantity=36, price=60.91]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-11-03, type=SELL, symbol=AMZN, quantity=36, price=60.91]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-05-04, type=BUY, symbol=AMZN, quantity=18, price=141.26] for 18 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-06-24, type=BUY, symbol=AMZN, quantity=172, price=162.62]. using 18 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-11-03, type=SELL, symbol=AMZN, quantity=36, price=60.91]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 36 shares of AMZN: $-3277.08
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-11-04, type=SELL, symbol=GOOG, quantity=175, price=263.81]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-11-04, type=SELL, symbol=GOOG, quantity=175, price=263.81]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-03-20, type=BUY, symbol=GOOG, quantity=16, price=283.24] for 16 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-04-26, type=BUY, symbol=GOOG, quantity=4, price=482.06] for 4 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-06-13, type=BUY, symbol=GOOG, quantity=81, price=44.80] for 81 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-07-22, type=BUY, symbol=GOOG, quantity=61, price=385.66] for 61 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-13, type=BUY, symbol=GOOG, quantity=87, price=316.34]. using 13 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-11-04, type=SELL, symbol=GOOG, quantity=175, price=263.81]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 175 shares of GOOG: $8440.19
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-11-15, type=SELL, symbol=MSFT, quantity=75, price=68.62]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-11-15, type=SELL, symbol=MSFT, quantity=75, price=68.62]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-05-15, type=BUY, symbol=MSFT, quantity=32, price=130.82] for 32 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-06-22, type=BUY, symbol=MSFT, quantity=90, price=288.10]. using 43 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-11-15, type=SELL, symbol=MSFT, quantity=75, price=68.62]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 75 shares of MSFT: $-11428.04
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-11-22, type=BUY, symbol=AMZN, quantity=53, price=19.93]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-12-09, type=SELL, symbol=AAPL, quantity=71, price=280.39]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2021-12-09, type=SELL, symbol=AAPL, quantity=71, price=280.39]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-07-30, type=BUY, symbol=AAPL, quantity=8, price=297.80] for 8 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-10-20, type=BUY, symbol=AAPL, quantity=91, price=194.49]. using 63 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2021-12-09, type=SELL, symbol=AAPL, quantity=71, price=280.39]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 71 shares of AAPL: $5272.42
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2021-12-21, type=BUY, symbol=MSFT, quantity=173, price=314.67]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-01-19, type=SELL, symbol=AAPL, quantity=47, price=79.08]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-01-19, type=SELL, symbol=AAPL, quantity=47, price=79.08]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-10-20, type=BUY, symbol=AAPL, quantity=28, price=194.49] for 28 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-10-30, type=BUY, symbol=AAPL, quantity=72, price=399.95]. using 19 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-01-19, type=SELL, symbol=AAPL, quantity=47, price=79.08]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 47 shares of AAPL: $-9328.01
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-01-19, type=SELL, symbol=AMZN, quantity=139, price=326.43]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-01-19, type=SELL, symbol=AMZN, quantity=139, price=326.43]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-06-24, type=BUY, symbol=AMZN, quantity=154, price=162.62]. using 139 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-01-19, type=SELL, symbol=AMZN, quantity=139, price=326.43]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 139 shares of AMZN: $22769.59
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-02-07, type=SELL, symbol=AAPL, quantity=145, price=212.13]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-02-07, type=SELL, symbol=AAPL, quantity=145, price=212.13]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-10-30, type=BUY, symbol=AAPL, quantity=53, price=399.95] for 53 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-03-17, type=BUY, symbol=AAPL, quantity=159, price=177.26]. using 92 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-02-07, type=SELL, symbol=AAPL, quantity=145, price=212.13]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 145 shares of AAPL: $-6746.42
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-02-09, type=BUY, symbol=AAPL, quantity=178, price=350.05]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-02-11, type=BUY, symbol=MSFT, quantity=49, price=429.60]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-02-12, type=BUY, symbol=GOOG, quantity=164, price=26.63]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-02-18, type=SELL, symbol=AMZN, quantity=93, price=136.21]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-02-18, type=SELL, symbol=AMZN, quantity=93, price=136.21]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-06-24, type=BUY, symbol=AMZN, quantity=15, price=162.62] for 15 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-06-29, type=BUY, symbol=AMZN, quantity=26, price=492.95] for 26 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-25, type=BUY, symbol=AMZN, quantity=188, price=421.78]. using 52 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-02-18, type=SELL, symbol=AMZN, quantity=93, price=136.21]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 93 shares of AMZN: $-24521.03
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-02-24, type=SELL, symbol=AAPL, quantity=106, price=286.75]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-02-24, type=SELL, symbol=AAPL, quantity=106, price=286.75]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-03-17, type=BUY, symbol=AAPL, quantity=67, price=177.26] for 67 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-08-19, type=BUY, symbol=AAPL, quantity=10, price=481.41] for 10 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-08-20, type=BUY, symbol=AAPL, quantity=131, price=167.69]. using 29 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-02-24, type=SELL, symbol=AAPL, quantity=106, price=286.75]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 106 shares of AAPL: $8841.97
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-02-25, type=SELL, symbol=MSFT, quantity=187, price=201.69]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-02-25, type=SELL, symbol=MSFT, quantity=187, price=201.69]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-06-22, type=BUY, symbol=MSFT, quantity=47, price=288.10] for 47 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-07-05, type=BUY, symbol=MSFT, quantity=4, price=457.01] for 4 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-07-23, type=BUY, symbol=MSFT, quantity=106, price=465.30] for 106 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-09-07, type=BUY, symbol=MSFT, quantity=144, price=184.33]. using 30 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-02-25, type=SELL, symbol=MSFT, quantity=187, price=201.69]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 187 shares of MSFT: $-32504.41
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-03-02, type=SELL, symbol=GOOG, quantity=48, price=258.35]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-03-02, type=SELL, symbol=GOOG, quantity=48, price=258.35]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-13, type=BUY, symbol=GOOG, quantity=74, price=316.34]. using 48 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-03-02, type=SELL, symbol=GOOG, quantity=48, price=258.35]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 48 shares of GOOG: $-2783.52
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-03-17, type=SELL, symbol=GOOG, quantity=6, price=74.64]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-03-17, type=SELL, symbol=GOOG, quantity=6, price=74.64]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-13, type=BUY, symbol=GOOG, quantity=26, price=316.34]. using 6 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-03-17, type=SELL, symbol=GOOG, quantity=6, price=74.64]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 6 shares of GOOG: $-1450.2
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-03-18, type=SELL, symbol=GOOG, quantity=43, price=399.20]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-03-18, type=SELL, symbol=GOOG, quantity=43, price=399.20]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-10-13, type=BUY, symbol=GOOG, quantity=20, price=316.34] for 20 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-15, type=BUY, symbol=GOOG, quantity=161, price=146.84]. using 23 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-03-18, type=SELL, symbol=GOOG, quantity=43, price=399.20]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 43 shares of GOOG: $7461.48
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-03-20, type=SELL, symbol=GOOG, quantity=93, price=247.30]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-03-20, type=SELL, symbol=GOOG, quantity=93, price=247.30]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-15, type=BUY, symbol=GOOG, quantity=138, price=146.84]. using 93 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-03-20, type=SELL, symbol=GOOG, quantity=93, price=247.30]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 93 shares of GOOG: $9342.78
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-03-29, type=BUY, symbol=GOOG, quantity=25, price=492.42]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-03-30, type=SELL, symbol=AMZN, quantity=145, price=355.25]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-03-30, type=SELL, symbol=AMZN, quantity=145, price=355.25]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-10-25, type=BUY, symbol=AMZN, quantity=136, price=421.78] for 136 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-28, type=BUY, symbol=AMZN, quantity=127, price=467.02]. using 9 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-03-30, type=SELL, symbol=AMZN, quantity=145, price=355.25]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 145 shares of AMZN: $-10054.01
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-04-02, type=BUY, symbol=AMZN, quantity=92, price=293.47]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-04-12, type=BUY, symbol=MSFT, quantity=13, price=452.13]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-05-05, type=BUY, symbol=GOOG, quantity=2, price=227.93]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-05-14, type=BUY, symbol=AAPL, quantity=170, price=409.18]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-05-16, type=BUY, symbol=MSFT, quantity=17, price=277.19]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-05-19, type=SELL, symbol=MSFT, quantity=96, price=37.78]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-05-19, type=SELL, symbol=MSFT, quantity=96, price=37.78]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-09-07, type=BUY, symbol=MSFT, quantity=114, price=184.33]. using 96 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-05-19, type=SELL, symbol=MSFT, quantity=96, price=37.78]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 96 shares of MSFT: $-14068.8
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-05-23, type=SELL, symbol=MSFT, quantity=27, price=423.61]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-05-23, type=SELL, symbol=MSFT, quantity=27, price=423.61]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-09-07, type=BUY, symbol=MSFT, quantity=18, price=184.33] for 18 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2020-11-09, type=BUY, symbol=MSFT, quantity=60, price=279.81]. using 9 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-05-23, type=SELL, symbol=MSFT, quantity=27, price=423.61]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 27 shares of MSFT: $5601.24
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-06-04, type=SELL, symbol=MSFT, quantity=110, price=65.88]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-06-04, type=SELL, symbol=MSFT, quantity=110, price=65.88]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2020-11-09, type=BUY, symbol=MSFT, quantity=51, price=279.81] for 51 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-01-31, type=BUY, symbol=MSFT, quantity=17, price=185.10] for 17 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-02-18, type=BUY, symbol=MSFT, quantity=34, price=377.66] for 34 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-06-01, type=BUY, symbol=MSFT, quantity=194, price=302.05]. using 8 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-06-04, type=SELL, symbol=MSFT, quantity=110, price=65.88]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 110 shares of MSFT: $-25427.05
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-06-06, type=BUY, symbol=MSFT, quantity=182, price=98.84]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-06-14, type=BUY, symbol=MSFT, quantity=178, price=496.07]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-07-04, type=BUY, symbol=AAPL, quantity=55, price=35.44]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-07-10, type=BUY, symbol=MSFT, quantity=1, price=96.07]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-07-25, type=BUY, symbol=GOOG, quantity=158, price=307.15]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-07-30, type=SELL, symbol=AMZN, quantity=13, price=46.60]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-07-30, type=SELL, symbol=AMZN, quantity=13, price=46.60]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-28, type=BUY, symbol=AMZN, quantity=118, price=467.02]. using 13 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-07-30, type=SELL, symbol=AMZN, quantity=13, price=46.60]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 13 shares of AMZN: $-5465.46
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-08-06, type=BUY, symbol=MSFT, quantity=138, price=263.32]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-08-18, type=SELL, symbol=GOOG, quantity=114, price=146.22]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-08-18, type=SELL, symbol=GOOG, quantity=114, price=146.22]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-10-15, type=BUY, symbol=GOOG, quantity=45, price=146.84] for 45 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-20, type=BUY, symbol=GOOG, quantity=197, price=218.93]. using 69 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-08-18, type=SELL, symbol=GOOG, quantity=114, price=146.22]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 114 shares of GOOG: $-5044.89
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-08-27, type=BUY, symbol=MSFT, quantity=12, price=331.75]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-09-09, type=BUY, symbol=AAPL, quantity=107, price=122.10]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-09-09, type=BUY, symbol=AMZN, quantity=7, price=223.59]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-09-11, type=BUY, symbol=AMZN, quantity=191, price=160.03]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-09-20, type=SELL, symbol=AAPL, quantity=53, price=224.36]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-09-20, type=SELL, symbol=AAPL, quantity=53, price=224.36]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-08-20, type=BUY, symbol=AAPL, quantity=102, price=167.69]. using 53 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-09-20, type=SELL, symbol=AAPL, quantity=53, price=224.36]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 53 shares of AAPL: $3003.51
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-09-25, type=BUY, symbol=AAPL, quantity=61, price=255.14]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-09-30, type=SELL, symbol=AAPL, quantity=109, price=432.98]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-09-30, type=SELL, symbol=AAPL, quantity=109, price=432.98]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-08-20, type=BUY, symbol=AAPL, quantity=49, price=167.69] for 49 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-09-18, type=BUY, symbol=AAPL, quantity=87, price=399.71]. using 60 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-09-30, type=SELL, symbol=AAPL, quantity=109, price=432.98]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 109 shares of AAPL: $14995.41
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-09-30, type=SELL, symbol=GOOG, quantity=113, price=390.06]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-09-30, type=SELL, symbol=GOOG, quantity=113, price=390.06]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-20, type=BUY, symbol=GOOG, quantity=128, price=218.93]. using 113 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-09-30, type=SELL, symbol=GOOG, quantity=113, price=390.06]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 113 shares of GOOG: $19337.69
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-10-02, type=BUY, symbol=AMZN, quantity=58, price=122.07]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-10-30, type=BUY, symbol=GOOG, quantity=29, price=379.34]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-11-09, type=BUY, symbol=GOOG, quantity=153, price=170.30]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-11-26, type=SELL, symbol=MSFT, quantity=13, price=366.39]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-11-26, type=SELL, symbol=MSFT, quantity=13, price=366.39]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-06-01, type=BUY, symbol=MSFT, quantity=186, price=302.05]. using 13 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-11-26, type=SELL, symbol=MSFT, quantity=13, price=366.39]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 13 shares of MSFT: $836.42
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-12-02, type=BUY, symbol=AMZN, quantity=193, price=493.44]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-12-03, type=SELL, symbol=AAPL, quantity=188, price=269.24]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-12-03, type=SELL, symbol=AAPL, quantity=188, price=269.24]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-09-18, type=BUY, symbol=AAPL, quantity=27, price=399.71] for 27 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-02-09, type=BUY, symbol=AAPL, quantity=178, price=350.05]. using 161 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-12-03, type=SELL, symbol=AAPL, quantity=188, price=269.24]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 188 shares of AAPL: $-16533.1
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-12-05, type=BUY, symbol=AAPL, quantity=180, price=497.83]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-12-10, type=SELL, symbol=AAPL, quantity=103, price=161.26]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-12-10, type=SELL, symbol=AAPL, quantity=103, price=161.26]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-02-09, type=BUY, symbol=AAPL, quantity=17, price=350.05] for 17 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-05-14, type=BUY, symbol=AAPL, quantity=170, price=409.18]. using 86 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-12-10, type=SELL, symbol=AAPL, quantity=103, price=161.26]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 103 shares of AAPL: $-24530.55
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-12-20, type=SELL, symbol=MSFT, quantity=174, price=352.79]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-12-20, type=SELL, symbol=MSFT, quantity=174, price=352.79]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-06-01, type=BUY, symbol=MSFT, quantity=173, price=302.05] for 173 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-08-02, type=BUY, symbol=MSFT, quantity=143, price=460.79]. using 1 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-12-20, type=SELL, symbol=MSFT, quantity=174, price=352.79]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 174 shares of MSFT: $8670.02
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2022-12-31, type=SELL, symbol=GOOG, quantity=152, price=64.76]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2022-12-31, type=SELL, symbol=GOOG, quantity=152, price=64.76]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-10-20, type=BUY, symbol=GOOG, quantity=15, price=218.93] for 15 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-02-12, type=BUY, symbol=GOOG, quantity=164, price=26.63]. using 137 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2022-12-31, type=SELL, symbol=GOOG, quantity=152, price=64.76]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 152 shares of GOOG: $2911.26
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-01-14, type=SELL, symbol=MSFT, quantity=60, price=370.27]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-01-14, type=SELL, symbol=MSFT, quantity=60, price=370.27]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-08-02, type=BUY, symbol=MSFT, quantity=142, price=460.79]. using 60 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-01-14, type=SELL, symbol=MSFT, quantity=60, price=370.27]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 60 shares of MSFT: $-5431.2
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-02-11, type=SELL, symbol=AAPL, quantity=167, price=75.41]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-02-11, type=SELL, symbol=AAPL, quantity=167, price=75.41]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-05-14, type=BUY, symbol=AAPL, quantity=84, price=409.18] for 84 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-07-04, type=BUY, symbol=AAPL, quantity=55, price=35.44] for 55 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-09-09, type=BUY, symbol=AAPL, quantity=107, price=122.10]. using 28 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-02-11, type=SELL, symbol=AAPL, quantity=167, price=75.41]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 167 shares of AAPL: $-27145.65
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-02-19, type=SELL, symbol=AAPL, quantity=30, price=458.79]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-02-19, type=SELL, symbol=AAPL, quantity=30, price=458.79]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-09-09, type=BUY, symbol=AAPL, quantity=79, price=122.10]. using 30 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-02-19, type=SELL, symbol=AAPL, quantity=30, price=458.79]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 30 shares of AAPL: $10100.7
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-03-11, type=BUY, symbol=AAPL, quantity=111, price=275.93]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-03-21, type=SELL, symbol=GOOG, quantity=126, price=12.17]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-03-21, type=SELL, symbol=GOOG, quantity=126, price=12.17]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-02-12, type=BUY, symbol=GOOG, quantity=27, price=26.63] for 27 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-03-29, type=BUY, symbol=GOOG, quantity=25, price=492.42] for 25 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-05-05, type=BUY, symbol=GOOG, quantity=2, price=227.93] for 2 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-07-25, type=BUY, symbol=GOOG, quantity=158, price=307.15]. using 72 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-03-21, type=SELL, symbol=GOOG, quantity=126, price=12.17]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 126 shares of GOOG: $-34066.75
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-04-03, type=BUY, symbol=MSFT, quantity=64, price=94.33]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-04-22, type=SELL, symbol=MSFT, quantity=148, price=330.64]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-04-22, type=SELL, symbol=MSFT, quantity=148, price=330.64]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-08-02, type=BUY, symbol=MSFT, quantity=82, price=460.79] for 82 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-08-24, type=BUY, symbol=MSFT, quantity=8, price=351.78] for 8 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-12-21, type=BUY, symbol=MSFT, quantity=173, price=314.67]. using 58 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-04-22, type=SELL, symbol=MSFT, quantity=148, price=330.64]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 148 shares of MSFT: $-9915.16
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-05-04, type=SELL, symbol=MSFT, quantity=74, price=279.55]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-05-04, type=SELL, symbol=MSFT, quantity=74, price=279.55]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-12-21, type=BUY, symbol=MSFT, quantity=115, price=314.67]. using 74 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-05-04, type=SELL, symbol=MSFT, quantity=74, price=279.55]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 74 shares of MSFT: $-2598.88
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-05-09, type=SELL, symbol=AAPL, quantity=37, price=60.95]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-05-09, type=SELL, symbol=AAPL, quantity=37, price=60.95]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-09-09, type=BUY, symbol=AAPL, quantity=49, price=122.10]. using 37 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-05-09, type=SELL, symbol=AAPL, quantity=37, price=60.95]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 37 shares of AAPL: $-2262.55
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-05-21, type=BUY, symbol=GOOG, quantity=180, price=18.07]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-05-25, type=SELL, symbol=AAPL, quantity=122, price=211.61]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-05-25, type=SELL, symbol=AAPL, quantity=122, price=211.61]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-09-09, type=BUY, symbol=AAPL, quantity=12, price=122.10] for 12 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-09-25, type=BUY, symbol=AAPL, quantity=61, price=255.14] for 61 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-12-05, type=BUY, symbol=AAPL, quantity=180, price=497.83]. using 49 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-05-25, type=SELL, symbol=AAPL, quantity=122, price=211.61]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 122 shares of AAPL: $-15605.99
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-06-15, type=SELL, symbol=MSFT, quantity=190, price=175.35]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-06-15, type=SELL, symbol=MSFT, quantity=190, price=175.35]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-12-21, type=BUY, symbol=MSFT, quantity=41, price=314.67] for 41 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-02-11, type=BUY, symbol=MSFT, quantity=49, price=429.60] for 49 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-04-12, type=BUY, symbol=MSFT, quantity=13, price=452.13] for 13 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-05-16, type=BUY, symbol=MSFT, quantity=17, price=277.19] for 17 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-06-06, type=BUY, symbol=MSFT, quantity=182, price=98.84]. using 70 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-06-15, type=SELL, symbol=MSFT, quantity=190, price=175.35]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 190 shares of MSFT: $-18144.09
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-06-20, type=SELL, symbol=MSFT, quantity=155, price=35.57]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-06-20, type=SELL, symbol=MSFT, quantity=155, price=35.57]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-06-06, type=BUY, symbol=MSFT, quantity=112, price=98.84] for 112 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-06-14, type=BUY, symbol=MSFT, quantity=178, price=496.07]. using 43 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-06-20, type=SELL, symbol=MSFT, quantity=155, price=35.57]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 155 shares of MSFT: $-26887.74
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-06-24, type=BUY, symbol=AAPL, quantity=30, price=36.84]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-06-25, type=BUY, symbol=AMZN, quantity=175, price=85.49]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-07-03, type=SELL, symbol=GOOG, quantity=178, price=48.29]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-07-03, type=SELL, symbol=GOOG, quantity=178, price=48.29]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-07-25, type=BUY, symbol=GOOG, quantity=86, price=307.15] for 86 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-10-30, type=BUY, symbol=GOOG, quantity=29, price=379.34] for 29 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-11-09, type=BUY, symbol=GOOG, quantity=153, price=170.30]. using 63 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-07-03, type=SELL, symbol=GOOG, quantity=178, price=48.29]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 178 shares of GOOG: $-39549.04
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-07-05, type=BUY, symbol=GOOG, quantity=100, price=149.00]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-07-13, type=BUY, symbol=GOOG, quantity=15, price=38.61]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-07-22, type=SELL, symbol=AAPL, quantity=91, price=417.93]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-07-22, type=SELL, symbol=AAPL, quantity=91, price=417.93]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-12-05, type=BUY, symbol=AAPL, quantity=131, price=497.83]. using 91 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-07-22, type=SELL, symbol=AAPL, quantity=91, price=417.93]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 91 shares of AAPL: $-7270.9
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-08-06, type=SELL, symbol=GOOG, quantity=165, price=18.25]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-08-06, type=SELL, symbol=GOOG, quantity=165, price=18.25]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-11-09, type=BUY, symbol=GOOG, quantity=90, price=170.30] for 90 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-05-21, type=BUY, symbol=GOOG, quantity=180, price=18.07]. using 75 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-08-06, type=SELL, symbol=GOOG, quantity=165, price=18.25]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 165 shares of GOOG: $-13671
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-08-18, type=BUY, symbol=AAPL, quantity=191, price=240.67]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-08-20, type=SELL, symbol=MSFT, quantity=133, price=278.99]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-08-20, type=SELL, symbol=MSFT, quantity=133, price=278.99]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-06-14, type=BUY, symbol=MSFT, quantity=135, price=496.07]. using 133 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-08-20, type=SELL, symbol=MSFT, quantity=133, price=278.99]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 133 shares of MSFT: $-28871.64
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-08-24, type=SELL, symbol=MSFT, quantity=43, price=251.12]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-08-24, type=SELL, symbol=MSFT, quantity=43, price=251.12]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-06-14, type=BUY, symbol=MSFT, quantity=2, price=496.07] for 2 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-07-10, type=BUY, symbol=MSFT, quantity=1, price=96.07] for 1 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-08-06, type=BUY, symbol=MSFT, quantity=138, price=263.32]. using 40 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-08-24, type=SELL, symbol=MSFT, quantity=43, price=251.12]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 43 shares of MSFT: $-822.85
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-08-27, type=SELL, symbol=MSFT, quantity=176, price=33.86]
+ERROR [2025-02-03 14:09:41] insufficient shares available to sell for symbol: MSFT. Available: 174, Attempted to sell: 176
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: MSFT. Available: 174, Attempted to sell: 176
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-10-11, type=SELL, symbol=AAPL, quantity=66, price=350.84]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-10-11, type=SELL, symbol=AAPL, quantity=66, price=350.84]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-12-05, type=BUY, symbol=AAPL, quantity=40, price=497.83] for 40 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-03-11, type=BUY, symbol=AAPL, quantity=111, price=275.93]. using 26 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-10-11, type=SELL, symbol=AAPL, quantity=66, price=350.84]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 66 shares of AAPL: $-3931.94
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-10-16, type=BUY, symbol=GOOG, quantity=157, price=405.93]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-10-18, type=SELL, symbol=MSFT, quantity=44, price=273.15]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-10-18, type=SELL, symbol=MSFT, quantity=44, price=273.15]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-08-06, type=BUY, symbol=MSFT, quantity=98, price=263.32]. using 44 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-10-18, type=SELL, symbol=MSFT, quantity=44, price=273.15]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 44 shares of MSFT: $432.52
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-10-30, type=SELL, symbol=AAPL, quantity=84, price=262.46]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2023-10-30, type=SELL, symbol=AAPL, quantity=84, price=262.46]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-03-11, type=BUY, symbol=AAPL, quantity=85, price=275.93]. using 84 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2023-10-30, type=SELL, symbol=AAPL, quantity=84, price=262.46]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 84 shares of AAPL: $-1131.48
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-12-08, type=BUY, symbol=AAPL, quantity=71, price=395.97]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2023-12-12, type=BUY, symbol=GOOG, quantity=167, price=114.47]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-01-23, type=BUY, symbol=AAPL, quantity=156, price=488.37]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-02-28, type=BUY, symbol=MSFT, quantity=157, price=158.44]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-03-05, type=SELL, symbol=AMZN, quantity=11, price=360.46]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-03-05, type=SELL, symbol=AMZN, quantity=11, price=360.46]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-10-28, type=BUY, symbol=AMZN, quantity=105, price=467.02]. using 11 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-03-05, type=SELL, symbol=AMZN, quantity=11, price=360.46]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 11 shares of AMZN: $-1172.16
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-03-05, type=SELL, symbol=GOOG, quantity=171, price=437.63]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-03-05, type=SELL, symbol=GOOG, quantity=171, price=437.63]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2023-05-21, type=BUY, symbol=GOOG, quantity=105, price=18.07] for 105 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-07-05, type=BUY, symbol=GOOG, quantity=100, price=149.00]. using 66 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-03-05, type=SELL, symbol=GOOG, quantity=171, price=437.63]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 171 shares of GOOG: $63103.38
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-03-12, type=SELL, symbol=AAPL, quantity=141, price=327.23]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-03-12, type=SELL, symbol=AAPL, quantity=141, price=327.23]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2023-03-11, type=BUY, symbol=AAPL, quantity=1, price=275.93] for 1 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2023-06-24, type=BUY, symbol=AAPL, quantity=30, price=36.84] for 30 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-08-18, type=BUY, symbol=AAPL, quantity=191, price=240.67]. using 110 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-03-12, type=SELL, symbol=AAPL, quantity=141, price=327.23]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 141 shares of AAPL: $18284.6
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-04-08, type=BUY, symbol=AMZN, quantity=22, price=471.79]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-04-10, type=SELL, symbol=MSFT, quantity=94, price=449.73]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-04-10, type=SELL, symbol=MSFT, quantity=94, price=449.73]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-08-06, type=BUY, symbol=MSFT, quantity=54, price=263.32] for 54 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-08-27, type=BUY, symbol=MSFT, quantity=12, price=331.75] for 12 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-04-03, type=BUY, symbol=MSFT, quantity=64, price=94.33]. using 28 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-04-10, type=SELL, symbol=MSFT, quantity=94, price=449.73]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 94 shares of MSFT: $21433.1
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-04-18, type=BUY, symbol=AMZN, quantity=56, price=248.71]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-04-21, type=BUY, symbol=MSFT, quantity=62, price=354.44]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-04-25, type=BUY, symbol=GOOG, quantity=42, price=218.48]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-05-02, type=SELL, symbol=GOOG, quantity=132, price=485.55]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-05-02, type=SELL, symbol=GOOG, quantity=132, price=485.55]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2023-07-05, type=BUY, symbol=GOOG, quantity=34, price=149.00] for 34 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2023-07-13, type=BUY, symbol=GOOG, quantity=15, price=38.61] for 15 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-10-16, type=BUY, symbol=GOOG, quantity=157, price=405.93]. using 83 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-05-02, type=SELL, symbol=GOOG, quantity=132, price=485.55]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 132 shares of GOOG: $24755.26
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-05-11, type=SELL, symbol=MSFT, quantity=170, price=84.15]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-05-11, type=SELL, symbol=MSFT, quantity=170, price=84.15]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2023-04-03, type=BUY, symbol=MSFT, quantity=36, price=94.33] for 36 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2024-02-28, type=BUY, symbol=MSFT, quantity=157, price=158.44]. using 134 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-05-11, type=SELL, symbol=MSFT, quantity=170, price=84.15]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 170 shares of MSFT: $-10321.34
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-05-11, type=SELL, symbol=GOOG, quantity=125, price=98.85]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-05-11, type=SELL, symbol=GOOG, quantity=125, price=98.85]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2023-10-16, type=BUY, symbol=GOOG, quantity=74, price=405.93] for 74 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-12-12, type=BUY, symbol=GOOG, quantity=167, price=114.47]. using 51 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-05-11, type=SELL, symbol=GOOG, quantity=125, price=98.85]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 125 shares of GOOG: $-23520.54
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-05-24, type=SELL, symbol=AAPL, quantity=182, price=362.73]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-05-24, type=SELL, symbol=AAPL, quantity=182, price=362.73]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2023-08-18, type=BUY, symbol=AAPL, quantity=81, price=240.67] for 81 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2023-12-08, type=BUY, symbol=AAPL, quantity=71, price=395.97] for 71 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2024-01-23, type=BUY, symbol=AAPL, quantity=156, price=488.37]. using 30 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-05-24, type=SELL, symbol=AAPL, quantity=182, price=362.73]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 182 shares of AAPL: $3757.62
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-06-02, type=SELL, symbol=GOOG, quantity=13, price=112.48]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-06-02, type=SELL, symbol=GOOG, quantity=13, price=112.48]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-12-12, type=BUY, symbol=GOOG, quantity=116, price=114.47]. using 13 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-06-02, type=SELL, symbol=GOOG, quantity=13, price=112.48]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 13 shares of GOOG: $-25.87
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-06-25, type=SELL, symbol=MSFT, quantity=72, price=461.58]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-06-25, type=SELL, symbol=MSFT, quantity=72, price=461.58]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2024-02-28, type=BUY, symbol=MSFT, quantity=23, price=158.44] for 23 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2024-04-21, type=BUY, symbol=MSFT, quantity=62, price=354.44]. using 49 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-06-25, type=SELL, symbol=MSFT, quantity=72, price=461.58]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 72 shares of MSFT: $12222.08
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-06-27, type=SELL, symbol=AMZN, quantity=116, price=107.88]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-06-27, type=SELL, symbol=AMZN, quantity=116, price=107.88]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-10-28, type=BUY, symbol=AMZN, quantity=94, price=467.02] for 94 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2021-11-22, type=BUY, symbol=AMZN, quantity=53, price=19.93]. using 22 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-06-27, type=SELL, symbol=AMZN, quantity=116, price=107.88]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 116 shares of AMZN: $-31824.26
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-06-28, type=BUY, symbol=MSFT, quantity=41, price=83.40]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-07-04, type=BUY, symbol=AAPL, quantity=70, price=460.51]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-08-16, type=SELL, symbol=AAPL, quantity=90, price=494.23]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-08-16, type=SELL, symbol=AAPL, quantity=90, price=494.23]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2024-01-23, type=BUY, symbol=AAPL, quantity=126, price=488.37]. using 90 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-08-16, type=SELL, symbol=AAPL, quantity=90, price=494.23]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 90 shares of AAPL: $527.4
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-08-26, type=BUY, symbol=GOOG, quantity=82, price=102.14]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-09-15, type=SELL, symbol=GOOG, quantity=32, price=267.16]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol GOOG
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-09-15, type=SELL, symbol=GOOG, quantity=32, price=267.16]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2023-12-12, type=BUY, symbol=GOOG, quantity=103, price=114.47]. using 32 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-09-15, type=SELL, symbol=GOOG, quantity=32, price=267.16]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 32 shares of GOOG: $4886.08
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-09-18, type=SELL, symbol=AMZN, quantity=59, price=100.36]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-09-18, type=SELL, symbol=AMZN, quantity=59, price=100.36]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2021-11-22, type=BUY, symbol=AMZN, quantity=31, price=19.93] for 31 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-04-02, type=BUY, symbol=AMZN, quantity=92, price=293.47]. using 28 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-09-18, type=SELL, symbol=AMZN, quantity=59, price=100.36]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 59 shares of AMZN: $-2913.75
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-09-23, type=BUY, symbol=AAPL, quantity=74, price=317.76]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-10-21, type=BUY, symbol=GOOG, quantity=39, price=73.37]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-10-24, type=BUY, symbol=MSFT, quantity=12, price=194.10]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-10-29, type=BUY, symbol=MSFT, quantity=76, price=430.03]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-11-09, type=SELL, symbol=AAPL, quantity=180, price=190.67]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-11-09, type=SELL, symbol=AAPL, quantity=180, price=190.67]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2024-01-23, type=BUY, symbol=AAPL, quantity=36, price=488.37] for 36 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2024-07-04, type=BUY, symbol=AAPL, quantity=70, price=460.51] for 70 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2024-09-23, type=BUY, symbol=AAPL, quantity=74, price=317.76] for 74 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-11-09, type=SELL, symbol=AAPL, quantity=180, price=190.67]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 180 shares of AAPL: $-39010.66
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-11-09, type=BUY, symbol=AAPL, quantity=56, price=213.89]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-11-09, type=SELL, symbol=MSFT, quantity=128, price=415.42]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-11-09, type=SELL, symbol=MSFT, quantity=128, price=415.42]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2024-04-21, type=BUY, symbol=MSFT, quantity=13, price=354.44] for 13 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2024-06-28, type=BUY, symbol=MSFT, quantity=41, price=83.40] for 41 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2024-10-24, type=BUY, symbol=MSFT, quantity=12, price=194.10] for 12 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2024-10-29, type=BUY, symbol=MSFT, quantity=76, price=430.03]. using 62 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-11-09, type=SELL, symbol=MSFT, quantity=128, price=415.42]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 128 shares of MSFT: $16155.58
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-11-19, type=SELL, symbol=MSFT, quantity=74, price=358.34]
+ERROR [2025-02-03 14:09:41] insufficient shares available to sell for symbol: MSFT. Available: 14, Attempted to sell: 74
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: MSFT. Available: 14, Attempted to sell: 74
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-12-02, type=SELL, symbol=AAPL, quantity=26, price=45.47]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-12-02, type=SELL, symbol=AAPL, quantity=26, price=45.47]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2024-11-09, type=BUY, symbol=AAPL, quantity=56, price=213.89]. using 26 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-12-02, type=SELL, symbol=AAPL, quantity=26, price=45.47]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 26 shares of AAPL: $-4378.92
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-12-06, type=SELL, symbol=AMZN, quantity=149, price=338.65]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-12-06, type=SELL, symbol=AMZN, quantity=149, price=338.65]
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-04-02, type=BUY, symbol=AMZN, quantity=64, price=293.47] for 64 shares
+DEBUG [2025-02-03 14:09:41] consuming entire BUY transaction: Transaction[date=2022-09-09, type=BUY, symbol=AMZN, quantity=7, price=223.59] for 7 shares
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-09-11, type=BUY, symbol=AMZN, quantity=191, price=160.03]. using 78 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-12-06, type=SELL, symbol=AMZN, quantity=149, price=338.65]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 149 shares of AMZN: $17629.3
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-12-12, type=BUY, symbol=MSFT, quantity=92, price=473.87]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-12-15, type=SELL, symbol=AAPL, quantity=161, price=439.78]
+ERROR [2025-02-03 14:09:41] insufficient shares available to sell for symbol: AAPL. Available: 30, Attempted to sell: 161
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: AAPL. Available: 30, Attempted to sell: 161
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-12-19, type=SELL, symbol=AMZN, quantity=79, price=123.48]
+DEBUG [2025-02-03 14:09:41] processing SELL transaction for symbol AMZN
+DEBUG [2025-02-03 14:09:41] begin processing sell transaction: Transaction[date=2024-12-19, type=SELL, symbol=AMZN, quantity=79, price=123.48]
+DEBUG [2025-02-03 14:09:41] partially consuming BUY transaction: Transaction[date=2022-09-11, type=BUY, symbol=AMZN, quantity=113, price=160.03]. using 79 shares
+DEBUG [2025-02-03 14:09:41] completed processing sell transaction: Transaction[date=2024-12-19, type=SELL, symbol=AMZN, quantity=79, price=123.48]
+INFO  [2025-02-03 14:09:41] capital gain/loss for selling 79 shares of AMZN: $-2887.45
+INFO  [2025-02-03 14:09:41] processing transaction: Transaction[date=2024-12-19, type=BUY, symbol=MSFT, quantity=34, price=195.99]
+DEBUG [2025-02-03 14:09:41] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:09:41] completed processing transactions list
+INFO  [2025-02-03 14:09:41] printing summary of capital gains/losses per stock symbol:
+INFO  [2025-02-03 14:09:41] MSFT: $-116611.94
+INFO  [2025-02-03 14:09:41] GOOG: $-24755.27
+INFO  [2025-02-03 14:09:41] AAPL: $-57067.92
+INFO  [2025-02-03 14:09:41] AMZN: $19176.24
+INFO  [2025-02-03 14:09:41] program successfully finished executing @ 2025-02-03 14:09:41

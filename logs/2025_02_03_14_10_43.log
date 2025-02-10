@@ -1,0 +1,51 @@
+DEBUG [2025-02-03 14:10:43] initialized 'purchaseQueues' and 'symbolGains' maps in `CapitalCalculator` constructor
+INFO  [2025-02-03 14:10:43] adding 10 transactions from file: 20250203_141026_sample_transactions.csv
+INFO  [2025-02-03 14:10:43] sorting 10 transactions by date
+INFO  [2025-02-03 14:10:43] processing 10 transactions
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2020-01-20, type=BUY, symbol=MSFT, quantity=173, price=40.79]
+DEBUG [2025-02-03 14:10:43] adding BUY transaction for symbol MSFT
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2020-07-16, type=BUY, symbol=AAPL, quantity=122, price=91.97]
+DEBUG [2025-02-03 14:10:43] adding BUY transaction for symbol AAPL
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2020-08-17, type=SELL, symbol=MSFT, quantity=48, price=272.70]
+DEBUG [2025-02-03 14:10:43] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:10:43] begin processing sell transaction: Transaction[date=2020-08-17, type=SELL, symbol=MSFT, quantity=48, price=272.70]
+DEBUG [2025-02-03 14:10:43] partially consuming BUY transaction: Transaction[date=2020-01-20, type=BUY, symbol=MSFT, quantity=173, price=40.79]. using 48 shares
+DEBUG [2025-02-03 14:10:43] completed processing sell transaction: Transaction[date=2020-08-17, type=SELL, symbol=MSFT, quantity=48, price=272.70]
+INFO  [2025-02-03 14:10:43] capital gain/loss for selling 48 shares of MSFT: $11131.68
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2020-10-06, type=SELL, symbol=MSFT, quantity=161, price=385.53]
+ERROR [2025-02-03 14:10:43] insufficient shares available to sell for symbol: MSFT. Available: 125, Attempted to sell: 161
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: MSFT. Available: 125, Attempted to sell: 161
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2021-10-30, type=BUY, symbol=AMZN, quantity=127, price=453.29]
+DEBUG [2025-02-03 14:10:43] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2022-06-13, type=SELL, symbol=AMZN, quantity=128, price=254.99]
+ERROR [2025-02-03 14:10:43] insufficient shares available to sell for symbol: AMZN. Available: 127, Attempted to sell: 128
+java.lang.IllegalStateException: insufficient shares available to sell for symbol: AMZN. Available: 127, Attempted to sell: 128
+	at com.zeyadrashed.CapitalCalculator.processTransaction(CapitalCalculator.java:112)
+	at com.zeyadrashed.CapitalCalculator.processTransactions(CapitalCalculator.java:185)
+	at com.zeyadrashed.CapitalCalculator.main(CapitalCalculator.java:83)
+
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2023-08-06, type=BUY, symbol=GOOG, quantity=145, price=436.48]
+DEBUG [2025-02-03 14:10:43] adding BUY transaction for symbol GOOG
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2023-12-13, type=BUY, symbol=AMZN, quantity=5, price=98.38]
+DEBUG [2025-02-03 14:10:43] adding BUY transaction for symbol AMZN
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2024-01-16, type=SELL, symbol=MSFT, quantity=31, price=436.12]
+DEBUG [2025-02-03 14:10:43] processing SELL transaction for symbol MSFT
+DEBUG [2025-02-03 14:10:43] begin processing sell transaction: Transaction[date=2024-01-16, type=SELL, symbol=MSFT, quantity=31, price=436.12]
+DEBUG [2025-02-03 14:10:43] partially consuming BUY transaction: Transaction[date=2020-01-20, type=BUY, symbol=MSFT, quantity=125, price=40.79]. using 31 shares
+DEBUG [2025-02-03 14:10:43] completed processing sell transaction: Transaction[date=2024-01-16, type=SELL, symbol=MSFT, quantity=31, price=436.12]
+INFO  [2025-02-03 14:10:43] capital gain/loss for selling 31 shares of MSFT: $12255.23
+INFO  [2025-02-03 14:10:43] processing transaction: Transaction[date=2024-02-07, type=SELL, symbol=AAPL, quantity=106, price=106.82]
+DEBUG [2025-02-03 14:10:43] processing SELL transaction for symbol AAPL
+DEBUG [2025-02-03 14:10:43] begin processing sell transaction: Transaction[date=2024-02-07, type=SELL, symbol=AAPL, quantity=106, price=106.82]
+DEBUG [2025-02-03 14:10:43] partially consuming BUY transaction: Transaction[date=2020-07-16, type=BUY, symbol=AAPL, quantity=122, price=91.97]. using 106 shares
+DEBUG [2025-02-03 14:10:43] completed processing sell transaction: Transaction[date=2024-02-07, type=SELL, symbol=AAPL, quantity=106, price=106.82]
+INFO  [2025-02-03 14:10:43] capital gain/loss for selling 106 shares of AAPL: $1574.1
+INFO  [2025-02-03 14:10:43] completed processing transactions list
+INFO  [2025-02-03 14:10:43] printing summary of capital gains/losses per stock symbol:
+INFO  [2025-02-03 14:10:43] MSFT: $23386.91
+INFO  [2025-02-03 14:10:43] AAPL: $1574.1
+INFO  [2025-02-03 14:10:43] program successfully finished executing @ 2025-02-03 14:10:43
